@@ -75,11 +75,11 @@ public abstract class CustomActivity extends AppCompatActivity{
             int id = item.getItemId();
             Intent intent=null;
 
-            if(id==R.id.story1) {
+            if(id==R.id.story1 && validateNotSameActivity(MainActivity.class)) {
                 intent = new Intent(this, MainActivity.class);
                 this.drawerLayout = findViewById(R.id.drawerLayout_MainActivity1);
             }
-            if(id==R.id.story2) {
+            if(id==R.id.story2 && validateNotSameActivity(MainActivity2.class)) {
                 intent = new Intent(this, MainActivity2.class);
                 this.drawerLayout = findViewById(R.id.drawerLayout_MainActivity2);
             }
@@ -119,5 +119,12 @@ public abstract class CustomActivity extends AppCompatActivity{
 
         // Add NavigationView to DrawerLayout
         this.drawerLayout.addView(navigationView);
+    }
+
+    private boolean validateNotSameActivity(Class className){
+        if(this.getClass()==className){
+            return false;
+        }
+        return true;
     }
 }
