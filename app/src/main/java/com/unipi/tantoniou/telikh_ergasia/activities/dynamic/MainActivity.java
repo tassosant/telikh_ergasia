@@ -1,15 +1,8 @@
-package com.unipi.tantoniou.telikh_ergasia;
+package com.unipi.tantoniou.telikh_ergasia.activities.dynamic;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import android.app.ActionBar;
-import android.app.Activity;
 import android.os.Bundle;
-import android.view.MenuItem;
 
+import com.unipi.tantoniou.telikh_ergasia.R;
 import com.unipi.tantoniou.telikh_ergasia.customActivity.CustomActivity;
 
 
@@ -34,7 +27,8 @@ public class MainActivity extends CustomActivity {
 //
 //        // to make the Navigation drawer icon always appear on the action bar
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        drawMenu(R.id.drawerLayout_MainActivity);
+        drawMenu(R.id.drawerLayout_MainActivity1);
+        addNavOnClickEventListeners();
     }
 
 
