@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore = "HardcodedText"
+    >
+
+    <item
+        android:id="@+id/story1"
+        android:title="Item1" />
+
+    <item
+        android:id="@+id/story2"
+        android:title="Item2" />
+    <item
+        android:id="@+id/story3"
+        android:title="Item3" />
+    <item
+        android:id="@+id/story4"
+        android:title="Item4" />
+    <item
+        android:id="@+id/story5"
+        android:title="Item5" />
+    <item
+        android:id="@+id/statistics"
+        android:title="statistics" />
+</menu>
