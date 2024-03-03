@@ -12,11 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Telikh_ergasia"
         tools:targetApi="31">
+
         <activity
-            android:name=".MainActivityasdsa"
-            android:exported="false" />
-        <activity
-            android:name=".activities.dynamic.MainActivity2"
+            android:name=".activities.dynamic.MainActivity1"
             android:exported="false" />
         <activity
             android:name=".activities.dynamic.MainActivity"

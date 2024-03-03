@@ -3,10 +3,10 @@ package com.unipi.tantoniou.telikh_ergasia.activities.dynamic;
 import android.os.Bundle;
 
 import com.unipi.tantoniou.telikh_ergasia.R;
-import com.unipi.tantoniou.telikh_ergasia.customActivity.CustomActivity;
+import com.unipi.tantoniou.telikh_ergasia.customActivity.CustomMenuActivity;
 
 
-public class MainActivity extends CustomActivity {
+public class MainActivity extends CustomMenuActivity {
 
 
 
@@ -27,7 +27,7 @@ public class MainActivity extends CustomActivity {
 //
 //        // to make the Navigation drawer icon always appear on the action bar
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        drawMenu(R.id.drawerLayout_MainActivity1);
+        drawMenu(R.id.drawerLayout_MainActivity);
         addNavOnClickEventListeners();
     }
 

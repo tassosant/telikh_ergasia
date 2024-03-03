@@ -10,7 +10,7 @@
 //
 //import com.unipi.tantoniou.telikh_ergasia.customActivity.CustomActivityNavMenu;
 //
-//public class MainActivity2 extends AppCompatActivity implements CustomActivityNavMenu {
+//public class MainActivity1 extends AppCompatActivity implements CustomActivityNavMenu {
 //
 //    public DrawerLayout drawerLayout;
 //    public ActionBarDrawerToggle actionBarDrawerToggle;

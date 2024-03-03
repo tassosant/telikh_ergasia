@@ -2,10 +2,10 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawerLayout_MainActivity2"
+    android:id="@+id/drawerLayout_MainActivity1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.dynamic.MainActivity2"
+    tools:context=".activities.dynamic.MainActivity1"
     tools:ignore="HardcodedText"
     >
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,21 +18,25 @@
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="200dp"
+            android:layout_marginBottom="248dp"
             android:text="Button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="This is main Activity 2"
-            app:layout_constraintBottom_toTopOf="@+id/button3"
+        <ImageView
+            android:id="@+id/storyImage"
+            android:layout_width="248dp"
+            android:layout_height="273dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.147"
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="Story image" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"

@@ -1,15 +1,16 @@
 {
   "project_info": {
     "project_number": "226080958906",
+    "firebase_url": "https://telikh-ergasia-9f61a-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "telikh-ergasia-9f61a",
     "storage_bucket": "telikh-ergasia-9f61a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:226080958906:android:4bb28ee7a4245f95089583",
+        "mobilesdk_app_id": "1:226080958906:android:1d3cf7ae7796dfd4089583",
         "android_client_info": {
-          "package_name": "com.uinpi.tantoniou.telikh_ergasia"
+          "package_name": "com.unipi.tantoniou.telikh_ergasia"
         }
       },
       "oauth_client": [],
