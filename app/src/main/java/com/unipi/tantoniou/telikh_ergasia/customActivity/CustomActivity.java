@@ -22,14 +22,22 @@ import com.unipi.tantoniou.telikh_ergasia.R;
 import com.unipi.tantoniou.telikh_ergasia.activities.dynamic.MainActivity;
 import com.unipi.tantoniou.telikh_ergasia.activities.dynamic.MainActivity2;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public abstract class CustomActivity extends AppCompatActivity{
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
     public ActionBar actionBar;
 
+    //map them with menu items
+    public static final HashMap<Integer, LayoutObject> layoutObjects= new HashMap<Integer,LayoutObject>()
 
+    {{
+        put(R.id.story1,new LayoutObject(R.id.story1,R.id.drawerLayout_MainActivity1,MainActivity.class));
+        put(R.id.story2,new LayoutObject(R.id.story2,R.id.drawerLayout_MainActivity2,MainActivity2.class));
+    }};
 
 //    public static HashMap<>
 
@@ -41,6 +49,7 @@ public abstract class CustomActivity extends AppCompatActivity{
     }
 
     public void drawMenu(Integer layoutId){
+
         // drawer layout instance to toggle the menu icon to open
         // drawer and back button to close drawer
         this.drawerLayout = findViewById(layoutId);
@@ -74,14 +83,14 @@ public abstract class CustomActivity extends AppCompatActivity{
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
             Intent intent=null;
-
-            if(id==R.id.story1 && validateNotSameActivity(MainActivity.class)) {
-                intent = new Intent(this, MainActivity.class);
-                this.drawerLayout = findViewById(R.id.drawerLayout_MainActivity1);
-            }
-            if(id==R.id.story2 && validateNotSameActivity(MainActivity2.class)) {
-                intent = new Intent(this, MainActivity2.class);
-                this.drawerLayout = findViewById(R.id.drawerLayout_MainActivity2);
+            LayoutObject layoutObject = layoutObjects.get(id);
+            if(layoutObject!=null){
+                if(validateNotSameActivity(layoutObject.getActivityClass())){
+                    intent = new Intent(this, layoutObject.getActivityClass());
+                    this.drawerLayout = findViewById(layoutObject.getDrawerLayoutId());
+                }else{
+                    this.drawerLayout.closeDrawer(GravityCompat.START);
+                }
             }
             if(intent!=null) {
                 startActivity(intent);
@@ -121,6 +130,7 @@ public abstract class CustomActivity extends AppCompatActivity{
         this.drawerLayout.addView(navigationView);
     }
 
+    //if clicking the same activity item, it does nothing
     private boolean validateNotSameActivity(Class className){
         if(this.getClass()==className){
             return false;

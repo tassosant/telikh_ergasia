@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "226080958906",
+    "project_id": "telikh-ergasia-9f61a",
+    "storage_bucket": "telikh-ergasia-9f61a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226080958906:android:4bb28ee7a4245f95089583",
+        "android_client_info": {
+          "package_name": "com.uinpi.tantoniou.telikh_ergasia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzJvMklnwy5VO6Fz1iFX_g78Hs2JnctkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
