@@ -12,14 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Telikh_ergasia"
         tools:targetApi="31">
-
+        <activity
+            android:name=".activities.dynamic.StatisticsActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.dynamic.MainActivity1"
             android:exported="false" />
         <activity
             android:name=".activities.dynamic.MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+            android:exported="true">
+<!--            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

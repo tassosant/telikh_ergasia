@@ -20,6 +20,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.unipi.tantoniou.telikh_ergasia.R;
 import com.unipi.tantoniou.telikh_ergasia.activities.dynamic.MainActivity;
 import com.unipi.tantoniou.telikh_ergasia.activities.dynamic.MainActivity1;
+import com.unipi.tantoniou.telikh_ergasia.activities.dynamic.StatisticsActivity;
 
 import java.util.HashMap;
 
@@ -33,10 +34,7 @@ public abstract class CustomMenuActivity extends AppCompatActivity{
     {{
         put(R.id.home,new LayoutObject(R.id.home,R.id.drawerLayout_MainActivity, MainActivity.class));
         put(R.id.story1,new LayoutObject(R.id.story1,R.id.drawerLayout_MainActivity1,MainActivity1.class));
-        put(R.id.story2,new LayoutObject(R.id.story2,R.id.drawerLayout_MainActivity1,MainActivity1.class));
-        put(R.id.story3,new LayoutObject(R.id.story3,R.id.drawerLayout_MainActivity1,MainActivity1.class));
-        put(R.id.story4,new LayoutObject(R.id.story4,R.id.drawerLayout_MainActivity1,MainActivity1.class));
-        put(R.id.story5,new LayoutObject(R.id.story5,R.id.drawerLayout_MainActivity1,MainActivity1.class));
+        put(R.id.statistics,new LayoutObject(R.id.statistics,R.id.drawerLayout_StatisticsActivity, StatisticsActivity.class));
 //        put(R.id.story2,new LayoutObject(R.id.story2,R.id.drawerLayout_MainActivity2, MainActivity1.class));
     }};
 

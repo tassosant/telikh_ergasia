@@ -10,24 +10,13 @@
 
     <item
         android:id="@+id/story1"
-        android:title="Item1" />
-    <item
-        android:id="@+id/story2"
-        android:title="Item2" />
-    <item
-        android:id="@+id/story3"
-        android:title="Item3" />
-    <item
-        android:id="@+id/story4"
-        android:title="Item4" />
-    <item
-        android:id="@+id/story5"
-        android:title="Item5" />
+        android:title="Fairy Tales" />
+
 
 
     <item
         android:id="@+id/statistics"
-        android:title="statistics" >
+        android:title="Statistics" >
 
     </item>
 </menu>
