@@ -17,7 +17,7 @@ public class MainActivity1 extends CustomMenuActivity {
     StorageReference storageReference;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference storiesReference,storyReference;
-
+    ValueEventListenerCustom valueEventListenerCustom;
     ImageView storyImage;
 
     TextView textViewTitle;
@@ -31,14 +31,19 @@ public class MainActivity1 extends CustomMenuActivity {
 
         setContentView(R.layout.activity_main1);
         drawMenu(R.id.drawerLayout_MainActivity1);
-
         addNavOnClickEventListeners();
+
         storageReference = FirebaseStorage.getInstance().getReference();
+
+
         firebaseDatabase = FirebaseDatabase.getInstance();
         storiesReference = firebaseDatabase.getReference("Stories");
-        storyReference = storiesReference.child("Story1");
+
         storyImage = findViewById(R.id.storyImage);
         textViewTitle = findViewById(R.id.textViewTitle);
+
+
+
         getStory();
         story = "Beauty and the beast";
         myTts = new MyTts(this);
@@ -49,9 +54,11 @@ public class MainActivity1 extends CustomMenuActivity {
 
     public void getStory(){
 //        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storyImage,storageReference);
+        storyReference = storiesReference.child("Story1");
         ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
+
 //        storyReference.addListenerForSingleValueEvent(new ValueEventListenerCustom(storyImage,storageReference));
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
     }
@@ -64,4 +71,11 @@ public class MainActivity1 extends CustomMenuActivity {
         myTts.speak(story);
     }
 
+    public void getStory2(View view){
+        storyReference = storiesReference.child("Story2");
+        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
+        valueEventListenerCustom.setStoryImage(storyImage);
+        valueEventListenerCustom.setTitle(textViewTitle);
+        storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
+    }
 }
