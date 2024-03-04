@@ -2,6 +2,7 @@ package com.unipi.tantoniou.telikh_ergasia.activities.dynamic;
 
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -18,6 +19,8 @@ public class MainActivity1 extends CustomMenuActivity {
 
     ImageView storyImage;
 
+    TextView textViewTitle;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +35,19 @@ public class MainActivity1 extends CustomMenuActivity {
         storiesReference = firebaseDatabase.getReference("Stories");
         storyReference = storiesReference.child("Story1");
         storyImage = findViewById(R.id.storyImage);
+        textViewTitle = findViewById(R.id.textViewTitle);
         getStory();
     }
 
 
 
     public void getStory(){
-        storyReference.addListenerForSingleValueEvent(new ValueEventListenerCustom(storyImage,storageReference));
+//        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storyImage,storageReference);
+        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
+        valueEventListenerCustom.setStoryImage(storyImage);
+        valueEventListenerCustom.setTitle(textViewTitle);
+//        storyReference.addListenerForSingleValueEvent(new ValueEventListenerCustom(storyImage,storageReference));
+        storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
     }
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
