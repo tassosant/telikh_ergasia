@@ -1,6 +1,7 @@
 package com.unipi.tantoniou.telikh_ergasia.activities.dynamic;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,7 +21,9 @@ public class MainActivity1 extends CustomMenuActivity {
     ImageView storyImage;
 
     TextView textViewTitle;
+    MyTts myTts;
 
+    String story;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,9 @@ public class MainActivity1 extends CustomMenuActivity {
         storyImage = findViewById(R.id.storyImage);
         textViewTitle = findViewById(R.id.textViewTitle);
         getStory();
+        story = "Beauty and the beast";
+        myTts = new MyTts(this);
+
     }
 
 
@@ -52,6 +58,10 @@ public class MainActivity1 extends CustomMenuActivity {
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);
+    }
+
+    public void tellStory(View view){
+        myTts.speak(story);
     }
 
 }
