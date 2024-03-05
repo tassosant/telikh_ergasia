@@ -45,6 +45,7 @@ public class MainActivity1 extends CustomMenuActivity {
         storyImage = findViewById(R.id.storyImage);
         storyImage.setImageDrawable(getResources().getDrawable(R.drawable.home_image));
         textViewTitle = findViewById(R.id.textViewTitle);
+        textViewTitle.setText("Welcome to audio Fairy Tales");
 
         tellTheStory = findViewById(R.id.button3);
         tellTheStory.setVisibility(View.INVISIBLE);
@@ -57,16 +58,16 @@ public class MainActivity1 extends CustomMenuActivity {
 
 
 
-    public void getStory(){
-//        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storyImage,storageReference);
-        storyReference = storiesReference.child("Story1");
-        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
-        valueEventListenerCustom.setStoryImage(storyImage);
-        valueEventListenerCustom.setTitle(textViewTitle);
-
-//        storyReference.addListenerForSingleValueEvent(new ValueEventListenerCustom(storyImage,storageReference));
-        storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
-    }
+//    public void getStory(){
+////        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storyImage,storageReference);
+//        storyReference = storiesReference.child("Story1");
+//        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
+//        valueEventListenerCustom.setStoryImage(storyImage);
+//        valueEventListenerCustom.setTitle(textViewTitle);
+//
+////        storyReference.addListenerForSingleValueEvent(new ValueEventListenerCustom(storyImage,storageReference));
+//        storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
+//    }
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);
@@ -101,6 +102,23 @@ public class MainActivity1 extends CustomMenuActivity {
         tellTheStory.setVisibility(View.VISIBLE);
     }
     public void getStory4(View view){
+        storyReference = storiesReference.child("Story2");
+        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
+        valueEventListenerCustom.setStoryImage(storyImage);
+        valueEventListenerCustom.setTitle(textViewTitle);
+        storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
+        tellTheStory.setVisibility(View.VISIBLE);
+    }
+
+    public void getStory5(View view){
+        storyReference = storiesReference.child("Story2");
+        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
+        valueEventListenerCustom.setStoryImage(storyImage);
+        valueEventListenerCustom.setTitle(textViewTitle);
+        storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
+        tellTheStory.setVisibility(View.VISIBLE);
+    }
+    public void getStory6(View view){
         storyReference = storiesReference.child("Story2");
         ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
         valueEventListenerCustom.setStoryImage(storyImage);
