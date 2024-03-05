@@ -1,5 +1,6 @@
 package com.unipi.tantoniou.telikh_ergasia.activities.dynamic;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -25,6 +26,7 @@ public class MainActivity1 extends CustomMenuActivity {
 
     String story;
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,17 +36,14 @@ public class MainActivity1 extends CustomMenuActivity {
         addNavOnClickEventListeners();
 
         storageReference = FirebaseStorage.getInstance().getReference();
-
-
         firebaseDatabase = FirebaseDatabase.getInstance();
         storiesReference = firebaseDatabase.getReference("Stories");
 
         storyImage = findViewById(R.id.storyImage);
+        storyImage.setImageDrawable(getResources().getDrawable(R.drawable.home_image));
         textViewTitle = findViewById(R.id.textViewTitle);
 
-
-
-        getStory();
+//        getStory();
         story = "Beauty and the beast";
         myTts = new MyTts(this);
 
@@ -71,7 +70,28 @@ public class MainActivity1 extends CustomMenuActivity {
         myTts.speak(story);
     }
 
+    public void getStory1(View view){
+        storyReference = storiesReference.child("Story1");
+        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
+        valueEventListenerCustom.setStoryImage(storyImage);
+        valueEventListenerCustom.setTitle(textViewTitle);
+        storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
+    }
     public void getStory2(View view){
+        storyReference = storiesReference.child("Story2");
+        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
+        valueEventListenerCustom.setStoryImage(storyImage);
+        valueEventListenerCustom.setTitle(textViewTitle);
+        storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
+    }
+    public void getStory3(View view){
+        storyReference = storiesReference.child("Story2");
+        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
+        valueEventListenerCustom.setStoryImage(storyImage);
+        valueEventListenerCustom.setTitle(textViewTitle);
+        storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
+    }
+    public void getStory4(View view){
         storyReference = storiesReference.child("Story2");
         ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
         valueEventListenerCustom.setStoryImage(storyImage);
