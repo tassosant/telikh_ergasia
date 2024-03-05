@@ -1,6 +1,7 @@
 package com.unipi.tantoniou.telikh_ergasia.activities.dynamic;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,10 +30,13 @@ public class MainActivity1 extends CustomMenuActivity {
 
     Button tellTheStory;
 
+    SharedPreferences preferences;
+
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        preferences = getSharedPreferences("com.unipi.tantoniou.telikh_ergasia", MODE_PRIVATE);
 
         setContentView(R.layout.activity_main1);
         drawMenu(R.id.drawerLayout_MainActivity1);
@@ -46,7 +50,6 @@ public class MainActivity1 extends CustomMenuActivity {
         storyImage.setImageDrawable(getResources().getDrawable(R.drawable.home_image));
         textViewTitle = findViewById(R.id.textViewTitle);
         textViewTitle.setText("Welcome to audio Fairy Tales");
-
         tellTheStory = findViewById(R.id.button3);
         tellTheStory.setVisibility(View.INVISIBLE);
 
@@ -75,6 +78,8 @@ public class MainActivity1 extends CustomMenuActivity {
 
     public void tellStory(View view){
         myTts.speak(story);
+//        int counter = preferences.getInt("Story1", 0);
+//        textViewTitle.setText("Story1 is heard "+counter+" times.");
     }
 
     public void getStory1(View view){
@@ -84,6 +89,8 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        setCounter("Story1");
+
     }
     public void getStory2(View view){
         storyReference = storiesReference.child("Story2");
@@ -92,6 +99,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        setCounter("Story2");
     }
     public void getStory3(View view){
         storyReference = storiesReference.child("Story2");
@@ -100,6 +108,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        setCounter("Story3");
     }
     public void getStory4(View view){
         storyReference = storiesReference.child("Story2");
@@ -108,6 +117,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        setCounter("Story4");
     }
 
     public void getStory5(View view){
@@ -117,6 +127,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        setCounter("Story5");
     }
     public void getStory6(View view){
         storyReference = storiesReference.child("Story2");
@@ -125,5 +136,15 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        setCounter("Story6");
+    }
+
+    public void setCounter(String story){
+        int counter = preferences.getInt(story, 0);
+        counter++;
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt(story, counter);
+        editor.apply();
+
     }
 }
