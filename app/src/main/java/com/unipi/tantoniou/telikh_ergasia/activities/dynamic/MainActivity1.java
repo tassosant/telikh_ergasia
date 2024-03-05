@@ -3,6 +3,7 @@ package com.unipi.tantoniou.telikh_ergasia.activities.dynamic;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,6 +27,8 @@ public class MainActivity1 extends CustomMenuActivity {
 
     String story;
 
+    Button tellTheStory;
+
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,9 @@ public class MainActivity1 extends CustomMenuActivity {
         storyImage = findViewById(R.id.storyImage);
         storyImage.setImageDrawable(getResources().getDrawable(R.drawable.home_image));
         textViewTitle = findViewById(R.id.textViewTitle);
+
+        tellTheStory = findViewById(R.id.button3);
+        tellTheStory.setVisibility(View.INVISIBLE);
 
 //        getStory();
         story = "Beauty and the beast";
@@ -76,6 +82,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
+        tellTheStory.setVisibility(View.VISIBLE);
     }
     public void getStory2(View view){
         storyReference = storiesReference.child("Story2");
@@ -83,6 +90,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
+        tellTheStory.setVisibility(View.VISIBLE);
     }
     public void getStory3(View view){
         storyReference = storiesReference.child("Story2");
@@ -90,6 +98,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
+        tellTheStory.setVisibility(View.VISIBLE);
     }
     public void getStory4(View view){
         storyReference = storiesReference.child("Story2");
@@ -97,5 +106,6 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
+        tellTheStory.setVisibility(View.VISIBLE);
     }
 }
