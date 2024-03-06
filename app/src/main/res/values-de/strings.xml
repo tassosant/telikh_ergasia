@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Märchen</string>
+    <string name="nav_open">Offen</string>
+    <string name="nav_close">Schließen</string>
+    <string name="jack">Jack und die Bohnenstange</string>
+    <string name="beauty">Die Schöne und das Biest</string>
+
+    <string name="aladdin">Aladdin</string>
+    <string name="fiffy">Fiffy und Teddy</string>
+    <string name="matthew">Matthew ist oben</string>
+    <string name="fairy_tales">Märchen</string>
+
+    <string name="home">Heim</string>
+
+    <string name="statistics">Statistiken</string>
+
+</resources>

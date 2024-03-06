@@ -6,17 +6,17 @@
     >
     <item
         android:id="@+id/home"
-        android:title="Home" />
+        android:title="@string/home" />
 
     <item
         android:id="@+id/story1"
-        android:title="Fairy Tales" />
+        android:title="@string/fairy_tales" />
 
 
 
     <item
         android:id="@+id/statistics"
-        android:title="Statistics" >
+        android:title="@string/statistics" >
 
     </item>
 </menu>

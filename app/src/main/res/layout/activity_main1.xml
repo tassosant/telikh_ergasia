@@ -16,59 +16,59 @@
 
         <Button
             android:id="@+id/buttonStory4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="154dp"
+            android:layout_height="38dp"
             android:layout_marginBottom="60dp"
             android:onClick="getStory4"
-            android:text="story4"
+            android:text="@string/fiffy"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.939"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button3"
-            app:layout_constraintVertical_bias="0.857" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
             android:id="@+id/buttonStory3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="109dp"
+            android:layout_height="41dp"
             android:layout_marginBottom="60dp"
             android:onClick="getStory3"
-            android:text="story3"
+            android:text="@string/aladdin"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintHorizontal_bias="0.019"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button3"
-            app:layout_constraintVertical_bias="0.364" />
+            app:layout_constraintVertical_bias="0.674" />
 
         <Button
             android:id="@+id/buttonStory5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="142dp"
+            android:layout_height="38dp"
             android:layout_marginBottom="60dp"
             android:onClick="getStory5"
-            android:text="story5"
+            android:text="@string/matthew"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.77"
+            app:layout_constraintHorizontal_bias="0.021"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button3"
-            app:layout_constraintVertical_bias="0.364" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
             android:id="@+id/buttonStory2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="194dp"
+            android:layout_height="56dp"
             android:layout_marginBottom="60dp"
             android:onClick="getStory2"
-            android:text="story2"
+            android:text="@string/jack"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.219"
+            app:layout_constraintHorizontal_bias="0.028"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button3"
-            app:layout_constraintVertical_bias="0.364" />
+            app:layout_constraintVertical_bias="0.311" />
 
         <Button
             android:id="@+id/buttonStory6"
@@ -79,30 +79,30 @@
             android:text="story6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.773"
+            app:layout_constraintHorizontal_bias="0.953"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button3"
-            app:layout_constraintVertical_bias="0.857" />
+            app:layout_constraintVertical_bias="0.674" />
 
         <Button
             android:id="@+id/buttonStory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="162dp"
+            android:layout_height="56dp"
             android:layout_marginBottom="60dp"
             android:onClick="getStory1"
-            android:text="story1"
+            android:text="@string/beauty"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintHorizontal_bias="0.929"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button3"
-            app:layout_constraintVertical_bias="0.857" />
+            app:layout_constraintVertical_bias="0.311" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="248dp"
+            android:layout_marginBottom="320dp"
             android:onClick="tellStory"
             android:text="Tell The Story"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -112,8 +112,8 @@
 
         <ImageView
             android:id="@+id/storyImage"
-            android:layout_width="277dp"
-            android:layout_height="332dp"
+            android:layout_width="224dp"
+            android:layout_height="253dp"
             android:contentDescription="Story image"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

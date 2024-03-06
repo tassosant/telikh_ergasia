@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Παραμύθια</string>
+    <string name="nav_open">Άνοιγμα</string>
+
+    <string name="nav_close">Κλείσιμο</string>
+    <string name="jack">Ο Τζακ και η φασολιά</string>
+    <string name="beauty">Η Πεντάμορφη και το Τέρας</string>
+    <string name="aladdin">Αλαντίν</string>
+    <string name="fiffy">Η Φίφη και ο Τέντυ</string>
+
+    <string name="matthew">Ο Μάθιου σηκώθηκε</string>
+    <string name="fairy_tales">Παραμύθια</string>
+    <string name="home">Αρχική σελίδα</string>
+    <string name="statistics">Στατιστικά</string>
+</resources>
