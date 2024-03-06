@@ -26,11 +26,11 @@ public class MainActivity1 extends CustomMenuActivity {
     TextView textViewTitle;
     MyTts myTts;
 
-    String story;
-
     Button tellTheStory;
 
     SharedPreferences preferences;
+
+    int chosenStory=0;
 
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
@@ -53,33 +53,38 @@ public class MainActivity1 extends CustomMenuActivity {
         tellTheStory = findViewById(R.id.button3);
         tellTheStory.setVisibility(View.INVISIBLE);
 
-//        getStory();
-        story = "Beauty and the beast";
         myTts = new MyTts(this);
 
     }
 
-
-
-//    public void getStory(){
-////        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storyImage,storageReference);
-//        storyReference = storiesReference.child("Story1");
-//        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
-//        valueEventListenerCustom.setStoryImage(storyImage);
-//        valueEventListenerCustom.setTitle(textViewTitle);
-//
-////        storyReference.addListenerForSingleValueEvent(new ValueEventListenerCustom(storyImage,storageReference));
-//        storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
-//    }
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);
     }
 
     public void tellStory(View view){
-        myTts.speak(story);
-//        int counter = preferences.getInt("Story1", 0);
-//        textViewTitle.setText("Story1 is heard "+counter+" times.");
+        switch (chosenStory){
+            case 1:
+                setCounter("Story1");
+                break;
+            case 2:
+                setCounter("Story2");
+                break;
+            case 3:
+                setCounter("Story3");
+                break;
+            case 4:
+                setCounter("Story4");
+                break;
+            case 5:
+                setCounter("Story5");
+                break;
+            case 6:
+                setCounter("Story6");
+                break;
+        }
+        myTts.speak(textViewTitle.getText().toString());
+
     }
 
     public void getStory1(View view){
@@ -89,7 +94,8 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
-        setCounter("Story1");
+        chosenStory = 1;
+
 
     }
     public void getStory2(View view){
@@ -99,7 +105,8 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
-        setCounter("Story2");
+        chosenStory = 2;
+
     }
     public void getStory3(View view){
         storyReference = storiesReference.child("Story2");
@@ -108,6 +115,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        chosenStory = 3;
         setCounter("Story3");
     }
     public void getStory4(View view){
@@ -117,6 +125,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        chosenStory = 4;
         setCounter("Story4");
     }
 
@@ -127,6 +136,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        chosenStory = 5;
         setCounter("Story5");
     }
     public void getStory6(View view){
@@ -136,6 +146,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setTitle(textViewTitle);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        chosenStory = 6;
         setCounter("Story6");
     }
 
