@@ -28,6 +28,8 @@ public class MainActivity1 extends CustomMenuActivity {
 
     Button tellTheStory;
 
+    Button stopTheStory;
+
     SharedPreferences preferences;
 
     String story = "";
@@ -55,6 +57,8 @@ public class MainActivity1 extends CustomMenuActivity {
         textViewTitle.setText("Welcome to audio Fairy Tales");
         tellTheStory = findViewById(R.id.button3);
         tellTheStory.setVisibility(View.INVISIBLE);
+        stopTheStory = findViewById(R.id.button);
+        stopTheStory.setVisibility(View.INVISIBLE);
 
         myTts = new MyTts(this);
 
@@ -90,6 +94,10 @@ public class MainActivity1 extends CustomMenuActivity {
         System.out.println("EVA: "+this.valueEventListenerCustom.getText());
     }
 
+    public void stopStory(View view){
+        myTts.stopSpeaking();
+    }
+
     public void getStory1(View view){
         // beauty and the beast
         myTts.stopSpeaking();
@@ -100,6 +108,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setText(story);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        stopTheStory.setVisibility(View.VISIBLE);
         chosenStory = 1;
 
 
@@ -114,6 +123,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setText(story);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        stopTheStory.setVisibility(View.VISIBLE);
         chosenStory = 2;
 
     }
@@ -127,6 +137,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setText(story);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        stopTheStory.setVisibility(View.VISIBLE);
         chosenStory = 3;
         setCounter("Story3");
     }
@@ -140,6 +151,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setText(story);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        stopTheStory.setVisibility(View.VISIBLE);
         chosenStory = 4;
         setCounter("Story4");
     }
@@ -154,6 +166,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setText(story);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        stopTheStory.setVisibility(View.VISIBLE);
         chosenStory = 5;
         setCounter("Story5");
     }
@@ -167,6 +180,7 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setText(story);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
+        stopTheStory.setVisibility(View.VISIBLE);
         chosenStory = 6;
         setCounter("Story6");
     }
