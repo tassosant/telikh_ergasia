@@ -17,8 +17,15 @@ public class MyTts {
     public MyTts(Context context){
         tts = new TextToSpeech(context,initListener);
     }
-
+    public MyTts(){}
     public void speak(String message){
         tts.speak(message,TextToSpeech.QUEUE_ADD,null,null);
     }
+
+    public void stopSpeaking(){
+        tts.stop();
+       // tts.speak(message,TextToSpeech.QUEUE_FLUSH,null,null);
+    }
+
+
 }

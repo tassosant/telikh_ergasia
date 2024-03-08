@@ -30,7 +30,10 @@ public class MainActivity1 extends CustomMenuActivity {
 
     SharedPreferences preferences;
 
+    String story = "";
+
     int chosenStory=0;
+
 
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
@@ -83,15 +86,18 @@ public class MainActivity1 extends CustomMenuActivity {
                 setCounter("Story6");
                 break;
         }
-        myTts.speak(textViewTitle.getText().toString());
-
+        myTts.speak(this.valueEventListenerCustom.getText());
+        System.out.println("EVA: "+this.valueEventListenerCustom.getText());
     }
 
     public void getStory1(View view){
+        // beauty and the beast
+        myTts.stopSpeaking();
         storyReference = storiesReference.child("Story1");
-        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
+        this.valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
+        valueEventListenerCustom.setText(story);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
         chosenStory = 1;
@@ -99,30 +105,39 @@ public class MainActivity1 extends CustomMenuActivity {
 
     }
     public void getStory2(View view){
+        // jack
+        myTts.stopSpeaking();
         storyReference = storiesReference.child("Story2");
-        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
+        this.valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
+        valueEventListenerCustom.setText(story);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
         chosenStory = 2;
 
     }
     public void getStory3(View view){
-        storyReference = storiesReference.child("Story2");
-        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
+        // aladin
+        myTts.stopSpeaking();
+        storyReference = storiesReference.child("Story3");
+        this.valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
+        valueEventListenerCustom.setText(story);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
         chosenStory = 3;
         setCounter("Story3");
     }
     public void getStory4(View view){
-        storyReference = storiesReference.child("Story2");
-        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
+        // fifi and teady
+        myTts.stopSpeaking();
+        storyReference = storiesReference.child("Story4");
+        this.valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
+        valueEventListenerCustom.setText(story);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
         chosenStory = 4;
@@ -130,20 +145,26 @@ public class MainActivity1 extends CustomMenuActivity {
     }
 
     public void getStory5(View view){
-        storyReference = storiesReference.child("Story2");
-        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
+        // mathew is up
+        myTts.stopSpeaking();
+        storyReference = storiesReference.child("Story5");
+        this.valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
+        valueEventListenerCustom.setText(story);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
         chosenStory = 5;
         setCounter("Story5");
     }
     public void getStory6(View view){
-        storyReference = storiesReference.child("Story2");
-        ValueEventListenerCustom valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
+        // quantum butterfly
+        myTts.stopSpeaking();
+        storyReference = storiesReference.child("Story6");
+        this.valueEventListenerCustom = new ValueEventListenerCustom(storageReference);
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
+        valueEventListenerCustom.setText(story);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
         chosenStory = 6;

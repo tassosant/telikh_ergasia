@@ -22,6 +22,7 @@ public class StatisticsActivity extends CustomMenuActivity {
     TextView favouriteStory;
     TextView textView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

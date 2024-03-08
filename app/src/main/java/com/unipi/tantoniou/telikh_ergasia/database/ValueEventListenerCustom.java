@@ -29,18 +29,19 @@ public class ValueEventListenerCustom implements ValueEventListener {
     TextView title;
 
     TextView writer;
-    TextView text;
+    String text;
 
     private int id;
 
 
 
 
-    public ValueEventListenerCustom(ImageView imageView, StorageReference storageReference) {
-        this.storageReference = storageReference;
-        this.storyImage = imageView;
-        initProperties();
-    }
+//    public ValueEventListenerCustom(ImageView imageView, StorageReference storageReference) {
+//        this.storageReference = storageReference;
+//        this.storyImage = imageView;
+//        // EVA:
+//        initProperties();
+//    }
 
     public ValueEventListenerCustom(StorageReference storageReference) {
         this.storageReference = storageReference;
@@ -66,9 +67,18 @@ public class ValueEventListenerCustom implements ValueEventListener {
     @Override
     public void onDataChange(@NonNull DataSnapshot snapshot) {
 //                recipeDescription.setText(snapshot.child("Description").getValue().toString());
-        getImage(snapshot);
-//        getElementText(snapshot);
-        getElementTitle(snapshot);
+        if (this.storyImage!=null){
+            getImage(snapshot);
+        }
+//        if (this.text!=null){
+            getElementText(snapshot);
+//        }
+        if (this.title!=null){
+            getElementTitle(snapshot);
+        }
+
+
+
 //        getElementWriter(snapshot);
 //        getElementId(snapshot);
     }
@@ -102,7 +112,8 @@ public class ValueEventListenerCustom implements ValueEventListener {
     }
 
     private void getElementText(DataSnapshot dataSnapshot){
-        this.text.setText(dataSnapshot.child("Text").getValue().toString());
+//        this.text.setText(dataSnapshot.child("Text").getValue().toString());
+        this.text=dataSnapshot.child("Text").getValue().toString();
     }
 
     private void getElementId(DataSnapshot dataSnapshot){
@@ -133,11 +144,11 @@ public class ValueEventListenerCustom implements ValueEventListener {
         this.writer = writer;
     }
 
-    public TextView getText() {
+    public String getText() {
         return text;
     }
 
-    public void setText(TextView text) {
+    public void setText(String text) {
         this.text = text;
     }
 }

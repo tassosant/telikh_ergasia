@@ -9,7 +9,6 @@ import com.unipi.tantoniou.telikh_ergasia.customActivity.CustomMenuActivity;
 public class MainActivity extends CustomMenuActivity {
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
