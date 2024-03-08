@@ -65,6 +65,20 @@ public class MainActivity1 extends CustomMenuActivity {
     }
 
     @Override
+    protected void onStop(){
+        super.onStop();
+        myTts.stopSpeaking();
+
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        myTts.stopSpeaking();
+
+    }
+
+    @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);
     }
