@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string-array name="language_options">
+        <item android:id="@id/english">English</item>
+        <item android:id="@id/german">German</item>
+        <item android:id="@id/greek">Greek</item>
+    </string-array>
+    <item name="english" type="id" />
+</resources>
