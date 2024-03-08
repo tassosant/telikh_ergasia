@@ -105,7 +105,7 @@ public class MainActivity1 extends CustomMenuActivity {
                 break;
         }
         myTts.speak(this.valueEventListenerCustom.getText());
-        System.out.println("EVA: "+this.valueEventListenerCustom.getText());
+
     }
 
     public void stopStory(View view){
@@ -153,7 +153,7 @@ public class MainActivity1 extends CustomMenuActivity {
         tellTheStory.setVisibility(View.VISIBLE);
         stopTheStory.setVisibility(View.VISIBLE);
         chosenStory = 3;
-        setCounter("Story3");
+
     }
     public void getStory4(View view){
         // fifi and teady
@@ -167,7 +167,7 @@ public class MainActivity1 extends CustomMenuActivity {
         tellTheStory.setVisibility(View.VISIBLE);
         stopTheStory.setVisibility(View.VISIBLE);
         chosenStory = 4;
-        setCounter("Story4");
+
     }
 
     public void getStory5(View view){
@@ -182,7 +182,7 @@ public class MainActivity1 extends CustomMenuActivity {
         tellTheStory.setVisibility(View.VISIBLE);
         stopTheStory.setVisibility(View.VISIBLE);
         chosenStory = 5;
-        setCounter("Story5");
+
     }
     public void getStory6(View view){
         // quantum butterfly
@@ -196,7 +196,7 @@ public class MainActivity1 extends CustomMenuActivity {
         tellTheStory.setVisibility(View.VISIBLE);
         stopTheStory.setVisibility(View.VISIBLE);
         chosenStory = 6;
-        setCounter("Story6");
+
     }
 
     public void setCounter(String story){
