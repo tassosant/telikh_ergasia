@@ -41,7 +41,7 @@
             android:id="@+id/textViewFairyTales"
             android:layout_width="272dp"
             android:layout_height="76dp"
-            android:text="Welcome to audio Fairy Tales"
+            android:text="@string/welcome"
             android:textAlignment="center"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"

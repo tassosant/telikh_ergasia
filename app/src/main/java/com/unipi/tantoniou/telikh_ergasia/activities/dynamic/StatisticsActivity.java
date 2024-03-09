@@ -54,7 +54,7 @@ public class StatisticsActivity extends CustomMenuActivity {
         StringBuffer text = new StringBuffer();
 
         for (String key : statistics.keySet()) {
-            text.append(key + ": " + statistics.get(key)+" times\n");
+            text.append(getTitle(key) + ": " + statistics.get(key)+" times\n");
         }
         textView.setText(text);
         String favourite = getFavourite(statistics);
@@ -74,7 +74,32 @@ public class StatisticsActivity extends CustomMenuActivity {
         if (max==0){
             return maxSt;
         }
-        return "Your favourite story is: "+ maxSt + "\nYou have heard it " + max+" times!";
+        return "Your favourite story is: "+ getTitle(maxSt) + "\nYou have heard it " + max+" times!";
+    }
+
+    public String getTitle(String story){
+        switch (story){
+            case "Story1":
+                return "Beauty and the beast";
+
+            case "Story2":
+                return "Jack and the Beanstalk";
+
+            case "Story3":
+                return "Aladdin";
+
+            case "Story4":
+                return "Fiffy and Teddy";
+
+            case "Story5":
+                return "Matthew is up";
+
+            case "Story6":
+                return "Quantum Butterfly";
+
+            default:
+                return "";
+        }
     }
 
 }

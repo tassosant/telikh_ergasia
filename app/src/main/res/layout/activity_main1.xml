@@ -100,7 +100,7 @@
             android:layout_height="56dp"
             android:layout_marginBottom="60dp"
             android:onClick="getStory6"
-            android:text="Quantum Butterfly"
+            android:text="@string/butterfly"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
