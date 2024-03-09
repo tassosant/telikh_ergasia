@@ -28,6 +28,8 @@ public class ValueEventListenerCustom implements ValueEventListener {
 
     TextView title;
 
+    TextView age;
+
     TextView writer;
     String text;
 
@@ -78,8 +80,14 @@ public class ValueEventListenerCustom implements ValueEventListener {
         }
 
 
+        if(this.writer!=null) {
+            getElementWriter(snapshot);
+        }
 
-//        getElementWriter(snapshot);
+        if(this.age!=null){
+            getElementAge(snapshot);
+        }
+
 //        getElementId(snapshot);
     }
 
@@ -121,7 +129,15 @@ public class ValueEventListenerCustom implements ValueEventListener {
     }
 
     private void getElementWriter(DataSnapshot dataSnapshot){
-       this.writer.setText(dataSnapshot.child("Writer").getValue().toString());
+        StringBuilder stringBuilder = new StringBuilder("Writer:");
+        stringBuilder.append(dataSnapshot.child("Writer").getValue().toString());
+       this.writer.setText(stringBuilder.toString());
+    }
+
+    private void getElementAge(DataSnapshot dataSnapshot){
+        StringBuilder stringBuilder = new StringBuilder("Age:");
+        stringBuilder.append(dataSnapshot.child("Age").getValue().toString());
+        this.age.setText(stringBuilder);
     }
 
     private void getTitle(DataSnapshot snapshot){
@@ -150,5 +166,14 @@ public class ValueEventListenerCustom implements ValueEventListener {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+
+    public TextView getAge() {
+        return age;
+    }
+
+    public void setAge(TextView age) {
+        this.age = age;
     }
 }

@@ -24,6 +24,10 @@ public class MainActivity1 extends CustomMenuActivity {
     ImageView storyImage;
 
     TextView textViewTitle;
+
+    TextView textViewAge;
+
+    TextView textViewWriter;
     MyTts myTts;
 
     Button tellTheStory;
@@ -55,6 +59,8 @@ public class MainActivity1 extends CustomMenuActivity {
         storyImage.setImageDrawable(getResources().getDrawable(R.drawable.home_image));
         textViewTitle = findViewById(R.id.textViewTitle);
         textViewTitle.setText("Welcome to audio Fairy Tales");
+        textViewWriter = findViewById(R.id.textViewWriter);
+        textViewAge = findViewById(R.id.textViewAge);
         tellTheStory = findViewById(R.id.button3);
         tellTheStory.setVisibility(View.INVISIBLE);
         stopTheStory = findViewById(R.id.button);
@@ -120,6 +126,8 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
         valueEventListenerCustom.setText(story);
+        valueEventListenerCustom.setWriter(textViewWriter);
+        valueEventListenerCustom.setAge(textViewAge);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
         stopTheStory.setVisibility(View.VISIBLE);
@@ -135,6 +143,8 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
         valueEventListenerCustom.setText(story);
+        valueEventListenerCustom.setWriter(textViewWriter);
+        valueEventListenerCustom.setAge(textViewAge);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
         stopTheStory.setVisibility(View.VISIBLE);
@@ -149,6 +159,8 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
         valueEventListenerCustom.setText(story);
+        valueEventListenerCustom.setWriter(textViewWriter);
+        valueEventListenerCustom.setAge(textViewAge);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
         stopTheStory.setVisibility(View.VISIBLE);
@@ -163,6 +175,8 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
         valueEventListenerCustom.setText(story);
+        valueEventListenerCustom.setWriter(textViewWriter);
+        valueEventListenerCustom.setAge(textViewAge);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
         stopTheStory.setVisibility(View.VISIBLE);
@@ -178,6 +192,8 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
         valueEventListenerCustom.setText(story);
+        valueEventListenerCustom.setWriter(textViewWriter);
+        valueEventListenerCustom.setAge(textViewAge);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
         stopTheStory.setVisibility(View.VISIBLE);
@@ -192,6 +208,8 @@ public class MainActivity1 extends CustomMenuActivity {
         valueEventListenerCustom.setStoryImage(storyImage);
         valueEventListenerCustom.setTitle(textViewTitle);
         valueEventListenerCustom.setText(story);
+        valueEventListenerCustom.setWriter(textViewWriter);
+        valueEventListenerCustom.setAge(textViewAge);
         storyReference.addListenerForSingleValueEvent(valueEventListenerCustom);
         tellTheStory.setVisibility(View.VISIBLE);
         stopTheStory.setVisibility(View.VISIBLE);
